@@ -1,86 +1,150 @@
 body{
   font-family:'Courier New', Courier, monospace;
   font-size: xx-large;
-  color: white
+  line-height: 2px;
+  color: white;
+
 }
-.topblock {
+.medpleft {
   float: left;
-  height: 200px;
-  width: 100%;
-  background-color: #0092ff;
+  height: 270px;
+  width: 32%;
+  background-color: #3d4bf5;
   text-align: center;
-  padding-top: 160px;
+  padding-top: 130px;
+  border-style: solid;
+  border-color: #ffa700;
+  border-width: 5%;
 }
-.topleftsidebar{
+.medtcenter {
   float: left;
-  height: 200px;
-  width: 50%;
-  background-color: #eaad21;
+  height: 270px;
+  width: 33%;
+  background-color: #7be7f0;
+  text-align: center;
+  padding-top: 130px;
+  border-style: solid;
+  border-color: #ffa700;
+  border-width: 5%;
+}
+.medpright {
+  float: left;
+  height: 270px;
+  width: 32%;
+  background-color: #3d4bf5;
+  text-align: center;
+  padding-top: 130px;
+  border-style: solid;
+  border-color: #ffa700;
+  border-width: 5%;
+}
+.header {
+  float: left;
+  height: 230px;
+  width: 83%;
+  background-color: #e8c4a1;
   text-align: center;
   padding-top: 160px;
+  border-style: solid;
+  border-color: #ffa700;
+  border-width: 5%;
 }
-.toprightsidebar{
-  float: right;
-  height: 200px;
-  width: 50%;
-  background-color: #ffe200;
+.img {
+  float: left;
+  height: 230px;
+  width: 15%;
+  background-color: #eaac21;
   text-align: center;
   padding-top: 160px;
+  border-style: solid;
+  border-color: #ffa700;
+  border-width: 5%;
 }
-.topmain{
-float: left;
-height: 200px;
-width: 75%;
-background-color: #65bcb5;
-text-align: center;
-padding-top: 160px;
+.main {
+  float: left;
+  height: 180px;
+  width: 66%;
+  background-color: #3d4bf5;
+  text-align: center;
+  padding-top: 160px;
+  border-style: solid;
+  border-color: #ffa700;
+  border-width: 5%;
 }
-.topdiv{
+.sidebar {
   float: right;
-  height: 200px;
+  height: 525px;
+  width: 33%;
+  background-color: #7be7f0;
+  text-align: center;
+  padding-top: 160px;
+  border-style: solid;
+  border-color: #ffa700;
+  border-width: 5%;
+}
+.quote {
+  float: left;
+  height: 179px;
+  width: 66%;
+  background-color: #eaac21;
+  text-align: center;
+  padding-top: 160px;
+  border-style: solid;
+  border-color: #ffa700;
+  border-width: 5%;
+}
+.smallpleft {
+  float: left;
+  height: 250px;
   width: 25%;
-  background-color: #0092ff;
+  background-color: #3d4bf5;
   text-align: center;
-  padding-top: 160px;
+  padding-top: 60px;
+  border-style: solid;
+  border-color: #ffa700;
+  border-width: 5%;
 }
-.leftsidebar{
+.smalltleft {
   float: left;
-  height: 200px;
-  width: 33.33%;
-  background-color: #eaad21;
+  height: 250px;
+  width: 25%;
+  background-color: #7be7f0;
   text-align: center;
-  padding-top: 160px;
+  padding-top: 60px;
+  border-style: solid;
+  border-color: #ffa700;
+  border-width: 5%;
 }
-.centersidebar{
+.smallpright {
   float: left;
-  height: 200px;
-  width: 33.33%;
-  background-color: #ffe200;
+  height: 250px;
+  width: 24%;
+  background-color: #3d4bf5;
   text-align: center;
-  padding-top: 160px;
+  padding-top: 60px;
+  border-style: solid;
+  border-color: #ffa700;
+  border-width: 5%;
 }
-.rightsidebar{
-  float: right;
-  height: 200px;
-  width: 33.33%;
-  background-color: #eaad21;
-  text-align: center;
-  padding-top: 160px;
-}
-.lowermain {
+.smallo {
   float: left;
-  height: 200px;
+  height: 250px;
+  width: 24%;
+  background-color: #eaac21;
+  text-align: center;
+  padding-top: 60px;
+  border-style: solid;
+  border-color: #ffa700;
+  border-width: 5%;
+}
+.footer{
+  float: left;
+  height: 180px;
   width: 100%;
-  background-color: #65bcb5;
+  background-color: #e8c4a1;
   text-align: center;
   padding-top: 160px;
-}
-.footer {
-  float: left;
-  height: 40px;
-  width: 100%;
-  background-color: #0092ff;
-  text-align: center;
-  padding-top: 30px;
-  padding-bottom: 20px;
+  border-style: solid;
+  border-color: #ffa700;
+  border-width: 5%;
 }
