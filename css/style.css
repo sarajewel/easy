@@ -1,88 +1,427 @@
 
 body{
-  font-family:'Courier New', Courier, monospace;
-  font-size: xx-large;
+
+  background-color: #f2e8d7;
   text-align: center;
-  line-height: 2px;
-  color: white;
 }
-.parentone > div{
-  border-style: solid;
-  border-color: #ffa700;
-  border-width: 5px 5px 5px 5px;
-  padding-top: 200px;
-}
-.parenttwo > div{
-  border-style: solid;
-  border-color: #ffa700;
-  border-width: 5px 5px 5px 5px;
-  padding-top: 200px;
-}
-.parentone{
+.container {
   display: grid;
-  grid-template-columns: repeat(6,1fr);
-  grid-template-rows: repeat(4, 400px);
+  grid-template-columns: .33fr .33fr .33fr;
+  grid-template-rows: .1fr .2fr .1fr 0.1fr .2fr .2fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  justify-items: center;
+  grid-template-areas:
+    "header header header"
+    "title title title"
+    "eat-in tunes eat-out"
+    "photo photo photo"
+    "quote quote quote"
+    "homefooter homefooter homefooter";
+ /* width: 100vw;
+  height: 100vh; */
 }
-.parenttwo {
+
+.header { grid-area: header;
+  width: 100%;
+  font-family: 'Besley', serif;
+  font-size: 60px;
+  color: #9cae8c;
+  background-color: #f3cdc7;
+  border-radius: 10px;
+}
+
+.title { grid-area: title;
+  font-family: 'Besley', serif;
+  font-size: 80px;
+  color: #e89295;
+  background-color: #f2e8d7;
+ }
+
+.eat-in { grid-area: eat-in; 
+  font-family: 'DM Serif Display', serif;
+  color: #4d6a34;
+  font-size: xxx-large;
+}
+
+.eat-in .overlayeatin {
+  position: absolute;
+  top: 540px;
+  left: 200px;
+  text-align: center;
+}
+
+.tunes { grid-area: tunes; 
+  font-family: 'DM Serif Display', serif;
+  color: #4d6a34;
+  font-size: xxx-large;
+}
+.tunes .overlaytunes {
+  position: absolute;
+  top: 560px;
+  left: 650px;
+  text-align: center;
+}
+
+.eat-out { grid-area: eat-out;
+  font-family: 'DM Serif Display', serif;
+  color: #4d6a34;
+  font-size: xxx-large;
+ }
+
+ .eat-out .overlayeatout {
+  position: absolute;
+  top: 540px;
+  right: 200px;
+  text-align: center;
+}
+
+a{
+  color: #4d6a34;
+  text-decoration: none;
+  
+}
+
+.flowerswirl{
+width: 100vw;
+height: 100vh;
+position: relative;
+left: 0px;
+right: 0px;
+z-index: -1;
+}
+.photo { grid-area: photo; 
+  position: relative;
+  font-family: 'Besley', serif;
+  font-size: x-large;
+  color: #4d6a34;
+}
+.text{
+  top: 35%;
+  bottom: 50%;
+  position: absolute;
+  left: 150px;
+  font-size: 100px;
+}
+
+.quote { grid-area: quote; 
+min-width: 1040px;
+}
+
+.homefooter { grid-area: homefooter; 
+  width: 100%;
+  background-color: #9cae8c;
+  border-radius: 10px;
+  font-family: 'DM Serif Display', serif;
+  color: #f3cdc7;
+  font-size: large;
+
+}
+.trial{
+  display: inline-block;
+}
+
+.therefore{
+  font-family: 'Besley', serif;
+  font-size: x-large;
+  color: #4d6a34;
+}
+
+
+
+/*eat in*/
+
+
+.containereatin {
+  background-color: #f2e8d7;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2,400px);
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.1fr 1.4fr 1.4fr 0.6fr;
+  gap: 15px 15px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "header header header"
+    "brownies muffins sugarcookie"
+    "misosalmon scallops octopus"
+    "footer footer footer";
 }
-.medpleft{
-  grid-column: 1/3;
-  background-color: #3d4bf5;
-}
-.medtcenter{
-  grid-column: 3/5;
-  background-color: #7be7f0;
-}
-.medpright{
-  grid-column: 5/7;
-  background-color: #3d4bf5;
-}
-.header {
-  grid-column: 1/6;
-  background-color: #e8c4a1;
-}
-.img{
-  grid-column: 6/7;
-  background-color: #eaac21;
-}
-.main{
-  grid-column: 1/5;
-  background-color: #3d4bf5;
-}
-.sidebar{
-  grid-column: 5/7;
-  grid-row: 3/5;
-  background-color: #7be7f0;
-  padding-top: 400px;
-}
-.quote{
-  grid-column: 1/5;
-  background-color: #eaac21;
-}
-.smallpleft{
-  grid-column: 1/2;
-  background-color: #3d4bf5;
-  font-size: x-large;
-}
-.smalltleft{
-  grid-column: 2/3;
-  background-color: #7be7f0;
-  font-size: x-large;
-}
-.smallpright{
-  grid-column: 3/4;
-  background-color: #3d4bf5;
-  font-size: x-large;
-}
-.smallo{
-  grid-column: 4/5;
-  background-color: #eaac21;
-  font-size: x-large;
-}
+
+
+.header { grid-area: header; }
+
+.brownies { grid-area: brownies; 
+  font-family: 'DM Serif Display', serif;
+  font-size: large;
+  color: #4d6a34;}
+
+.muffins { grid-area: muffins; 
+  font-family: 'DM Serif Display', serif;
+  font-size: large;
+  color: #4d6a34; }
+
+.sugarcookie { grid-area: sugarcookie; 
+  font-family: 'DM Serif Display', serif;
+  font-size: large;
+  color: #4d6a34;}
+
+.misosalmon { grid-area: misosalmon;
+  font-family: 'DM Serif Display', serif;
+  font-size: large;
+  color: #4d6a34; }
+
+.scallops { grid-area: scallops; 
+  font-family: 'DM Serif Display', serif;
+  font-size: large;
+  color: #4d6a34;}
+
+.octopus { grid-area: octopus; 
+  font-family: 'DM Serif Display', serif;
+  font-size: large;
+  color: #4d6a34;}
+
+.footer { grid-area: footer;
+  color: #f3cdc7;
+  background-color: #9cae8c;
+  font-family: 'Besley', serif;
+  font-size: xx-large; 
+  height: auto;
+  border-radius: 10px;}
+
+
+/*tunes page*/
+
+
+.containertunes {
+    background-color: #f2e8d7;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.1fr 1.2fr 1.2fr 0.6fr;
+    gap: 10px 10px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "header header header"
+      "spotify1 spotify2 spotify3"
+      "spotify4 spotify5 spotify6"
+      "footer footer footer";
+  }
 .footer{
-  grid-column: 1/5;
-  background-color: #e8c4a1;
+  text-decoration: none;
+    color: #9cae8c;
+    background-color: #f3cdc7;
+    padding-bottom: 10px;
+}
+
+/* eat out page */
+
+.containereatout {
+  background-color: #f2e8d7;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.1fr 1.2fr 1.2fr 1.2fr 0.6fr;
+  gap: 15px 15px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "header header header"
+    "sfog takumi ledip"
+    "saltline centrolina peacock"
+    "raku foursisters metro29"
+    "footer footer footer";
+}
+
+.sfog { grid-area: sfog; 
+  font-family: 'DM Serif Display', serif;
+  font-size: large;
+  color: #4d6a34; }
+
+.takumi { grid-area: takumi;
+  font-family: 'DM Serif Display', serif;
+  font-size: large;
+  color: #4d6a34; } 
+
+.ledip { grid-area: ledip;
+  font-family: 'DM Serif Display', serif;
+  font-size: large;
+  color: #4d6a34; } 
+
+.saltline { grid-area: saltline; 
+  font-family: 'DM Serif Display', serif;
+  font-size: large;
+  color: #4d6a34; }
+
+.centrolina { grid-area: centrolina;
+  font-family: 'DM Serif Display', serif;
+  font-size: large;
+  color: #4d6a34; } 
+
+.peacock { grid-area: peacock;
+  font-family: 'DM Serif Display', serif;
+  font-size: large;
+  color: #4d6a34; }
+
+.raku { grid-area: raku; 
+  font-family: 'DM Serif Display', serif;
+  font-size: large;
+  color: #4d6a34; }
+
+.foursisters { grid-area: foursisters;
+  font-family: 'DM Serif Display', serif;
+  font-size: large;
+  color: #4d6a34; } 
+
+.metro29 { grid-area: metro29;
+  font-family: 'DM Serif Display', serif;
+  font-size: large;
+  color: #4d6a34; }
+
+
+
+
+
+/*MOBILE VERSION*/
+
+
+
+
+@media screen and (max-width: 650px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: .1fr .1fr .1fr .1fr .1fr 0.1fr .2fr .2fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    justify-items: center;
+    grid-template-areas:
+      "header"
+      "title"
+      "eat-in" 
+      "tunes" 
+      "eat-out"
+      "photo"
+      "quote"
+      "homefooter";
+  }
+  .title { grid-area: title;
+    font-family: 'Besley', serif;
+    font-size: 60px;
+    color: #e89295;
+    background-color: #f2e8d7;
+   }
+  
+  .eat-in { grid-area: eat-in; 
+    font-family: 'DM Serif Display', serif;
+    color: #4d6a34;
+    font-size: xxx-large;
+  }
+  
+  .eat-in .overlayeatin {
+    position: absolute;
+    top: 885px;
+    left: 210px;
+    text-align: center;
+  }
+  
+  .tunes { grid-area: tunes; 
+    font-family: 'DM Serif Display', serif;
+    color: #4d6a34;
+    font-size: xxx-large;
+  }
+  .tunes .overlaytunes {
+    position: absolute;
+    top: 1640px;
+    left: 190px;
+    text-align: center;
+  }
+  
+  .eat-out { grid-area: eat-out;
+    font-family: 'DM Serif Display', serif;
+    color: #4d6a34;
+    font-size: xxx-large;
+   }
+  
+   .eat-out .overlayeatout {
+    position: absolute;
+    top: 2340px;
+    left: 200px;
+    text-align: center;
+  }
+  
+  a{
+    color: #4d6a34;
+    text-decoration: none;
+    
+  }
+  .text{
+    top: 35%;
+    bottom: 50%;
+    position: absolute;
+    left: 50px;
+    font-size: 60px;
+  }
+  .quote{
+    width: 60vw;
+  }
+/*this is the only shit not working lol*/ 
+
+  .containereatin {
+    background-color: #f2e8d7;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.1fr 1.4fr 1.4fr 1.4fr 1.4fr 1.4fr 1.4fr 0.6fr;
+    gap: 15px 15px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "header"
+      "brownies" 
+      "muffins" 
+      "sugarcookie"
+      "misosalmon" 
+      "scallops" 
+      "octopus"
+      "footer";
+  }
+
+  .containertunes {
+    background-color: #f2e8d7;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.1fr 1.2fr 1.2fr 1.2fr 1.2fr 1.2fr 1.2fr 0.6fr;
+    gap: 10px 10px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "header"
+      "spotify1" 
+      "spotify2" 
+      "spotify3"
+      "spotify4" 
+      "spotify5"
+      "spotify6"
+      "footer";
+  }
+
+  .containereatout {
+    background-color: #f2e8d7;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 0.6fr;
+    gap: 15px 15px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "header"
+      "sfog" 
+      "takumi" 
+      "ledip"
+      "saltline" 
+      "centrolina" 
+      "peacock"
+      "raku" 
+      "foursisters" 
+      "metro29"
+      "footer";
+  }
+
+
+
+
 }
